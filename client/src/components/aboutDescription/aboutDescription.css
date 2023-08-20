@@ -1,0 +1,78 @@
+/* aboutDescription.css */
+
+.aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.aboutPictureContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.aboutImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+  
+.aboutText {
+    font-family: 'Lora', serif;
+    color: #444;
+    text-align: center;
+    padding: 0 20px;
+}
+  
+.aboutTitleMain {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.aboutTitle {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+    color: rgb(161, 96, 4);
+}
+
+.aboutDescription {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+  
+.aboutSection {
+    margin-top: 40px;
+}
+  
+.aboutSectionTitle {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    color: #be9656;
+    margin-bottom: 10px;
+}
+  
+.aboutSubTitle {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-top: 15px;
+}
+  
+.aboutSubDescription {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+  
+.aboutSubSection {
+    margin-top: 30px;
+}
+  

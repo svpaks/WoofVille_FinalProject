@@ -1,0 +1,43 @@
+/* singleBooking.css */
+
+.bookingContainer {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border-radius: 20px;
+}
+  
+  .bookingEvent {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bookingEventImg {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .bookingEventName {
+    font-size: 18px;
+  }
+  
+  .deleteBookingButton {
+    background-color: #f443368e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 150px;
+  }
+  
+  .deleteBookingButton:hover {
+    background-color: #d52b2b;
+  }
+  
