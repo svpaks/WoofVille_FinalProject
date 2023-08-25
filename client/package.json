@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5001/api/"
+  "proxy": "https://woofville-backend.onrender.com/api/"
 }
