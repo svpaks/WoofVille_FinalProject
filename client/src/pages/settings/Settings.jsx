@@ -10,9 +10,10 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const { user, dispatch } = useContext(Context);
-  const PF = "https://woofville-backend.onrender.com/images/";
+  const PF = `${BASE_URL}/images/`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,11 +31,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post(`${BASE_URL}/upload`, data);
       } catch (error) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(`${BASE_URL}/users/` + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (error) {

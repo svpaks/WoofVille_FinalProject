@@ -8,9 +8,11 @@ import format from 'date-fns/format';
 export default function SingleBooking({ key, event, getBookings }) {
     // const { user } = useContext(Context);
     // Function to handle the deletion of the booking
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
+
     const handleDeleteBooking = async () => {
         try {
-            const response = await axios.delete(`bookings/${event.id}`);
+            const response = await axios.delete(`${BASE_URL}/bookings/${event.id}`);
             if (response.status === 200) {
                 // Handle successful deletion, e.g., show a message or update state
                 console.log('Booking deleted successfully');

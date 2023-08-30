@@ -9,11 +9,12 @@ export default function Sidebar() {
     const [cats, setCats] = useState([]);
     const latitude = 32.077962; // Replace with your latitude
     const longitude = 34.774165; // Replace with your longitude
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
   
     useEffect(() => {
         const getCats = async () =>
         {
-            const res = await axios.get("/categories");
+            const res = await axios.get(`${BASE_URL}/categories`);
             setCats(res.data);
         };
         getCats();

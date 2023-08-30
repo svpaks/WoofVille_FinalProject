@@ -25,10 +25,11 @@ const localizer = dateFnsLocalizer({
 export default function BookingCalendar({user}) {
   const [newEvent, setNewEvent] = useState({ title: "", start: new Date(), end: new Date() });
   const [allEvents, setAllEvents] = useState([]);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const getBookings = async () => {
     try {
-        const res = await axios.get("bookings");
+        const res = await axios.get(`${BASE_URL}/bookings`);
         if (res.status === 200) {
             const bookingsData = res.data.map(x => ({
               title: x.category,
@@ -59,7 +60,7 @@ const handleAddEvent = async () => {
   
   // Make the API POST request
   try {
-      const res = await axios.post("bookings", eventData);
+      const res = await axios.post(`${BASE_URL}/bookings`, eventData);
       if (res.status === 200) {
         getBookings();
         setNewEvent({ title: "", start: new Date(), end: new Date() });

@@ -11,10 +11,11 @@ import Footer from "../footer/Footer";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search);
+      const res = await axios.get(`${BASE_URL}/posts` + search);
       // console.log(res.data);
       setPosts(res.data);
     }

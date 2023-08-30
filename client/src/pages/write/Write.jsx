@@ -8,7 +8,8 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-  console.log(user);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  // console.log(user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,11 +25,11 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post(`${BASE_URL}/upload`, data);
       } catch (error) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post(`${BASE_URL}/posts`, newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {}
   };
