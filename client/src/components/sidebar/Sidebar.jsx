@@ -18,7 +18,7 @@ export default function Sidebar() {
             setCats(res.data);
         };
         getCats();
-    }, []);
+    }, [BASE_URL]);
   return (
     <div className="sidebar">
         <div className="sidebarItem">

@@ -22,7 +22,7 @@ export default function SinglePost() {
             setDesc(res.data.desc);
         };
         getPost();
-    }, [path]);
+    }, [path, BASE_URL]);
 
   const handleDelete = async () => {
     try {
