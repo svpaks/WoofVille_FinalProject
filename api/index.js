@@ -47,7 +47,7 @@ app.use("/api/categories", categoryRoute);
 app.use("/api/bookings", bookingRoute);
 
 
-app.listen("5001", () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend is running.");
 });
 
